@@ -104,3 +104,7 @@ const filmy = [
 		premiera: '2022-12-24',
 	},
 ]
+
+
+const filmsVypis = document.querySelector("#seznam-filmu")
+console.log(filmsVypis)
