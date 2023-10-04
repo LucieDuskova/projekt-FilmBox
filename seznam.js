@@ -104,3 +104,33 @@ const filmy = [
 		premiera: '2022-12-24',
 	},
 ]
+
+
+
+
+const filmsVypis = document.querySelector("#seznam-filmu")
+
+filmsVypis.innerHTML = ""
+
+filmy.forEach(film => {
+  const filmCard = document.createElement("div");
+  filmCard.classList.add("col");
+  filmCard.innerHTML = `
+    <div class="card">
+      <img
+        src="${film.plakat.url}"
+        width="${film.plakat.sirka}"
+        height="${film.plakat.vyska}"
+        class="card-img-top"
+        alt="plakát"
+      />
+      <div class="card-body">
+        <h5 class="card-title">${film.nazev}</h5>
+        <p class="card-text">${film.ochutnavka}</p>
+        <a href="film.html#${film.id}" class="btn btn-primary">Přehrát</a>
+      </div>
+    </div>
+  `;
+	filmsVypis.appendChild(filmCard);
+});
+

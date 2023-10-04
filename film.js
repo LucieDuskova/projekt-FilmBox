@@ -105,6 +105,3 @@ const filmy = [
 	},
 ]
 
-
-const filmsVypis = document.querySelector("#seznam-filmu")
-console.log(filmsVypis)
